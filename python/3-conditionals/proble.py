@@ -152,38 +152,129 @@
 
 
 
-a=int (input("enter num:"))
+# a=int (input("enter num:"))
 
-if a>100 and a<200:
-    total=a-((a*10)/100)
+# if a>100 and a<200:
+#     total=a-((a*10)/100)
+#     print(total)
+
+# elif a>=200:
+#     total=a-((a*20)/100)
+#     print(total)
+
+# else:
+#     print("no discount",a)
+
+
+
+# age=int(input("enter age:"))
+
+# if(age<=12):
+#     print("price is 10")
+
+# elif(age>12 and age<40):
+#     print("price is 15")
+
+# else:
+#     print("price is 12")
+
+
+# temp=int(input("temperature:"))
+# hum=int(input("enter humidity:"))
+
+# if(temp>30 and hum<40):
+#     print("water need")
+# else:
+#     print("not need")
+
+
+
+# amount=int(input("enter the amount:"))
+# y=int(input("enter the year:"))
+# if(y<=5):
+#     total=amount+(amount*5)/100
+#     print(total)
+
+# elif(y>5 and y<=10):
+#     total=amount+(amount*10)/100
+#     print(total)
+# else:
+#     total=amount+(amount*20)/100
+#     print(total)
+
+# 7. A travel agency offers discounts on train tickets: 5% for students, 10% for senior citizens, and no discount otherwise. Write a program to calculate the final ticket price.  
+
+
+age=int(input("enter the age:"))
+price=250
+if(age<=18):
+    total=price-(price*5)/100
+    print(total)
+elif(age>40 and age<=80):
+    total=price-(price*10)/100
+    print(total)
+else:
+    total=price
     print(total)
 
-elif a>=200:
-    total=a-((a*20)/100)
+
+    # 8. A food delivery app charges $5 for delivery. If the order amount is above $50, delivery is free. Write a program to calculate the total cost.  
+
+
+amount=int(input("enter the amount:"))
+if(amount>50):
+    total=amount
+    print(total)
+else:
+    total=amount+5
     print(total)
 
+
+    # 9. Write a program to check if a year is a leap year. A year is a leap year if it is divisible by 4 but not divisible by 100, except if it is divisible by 400.  
+
+year=int(input("enter the year:"))
+if(year%4==0 and year%100!=0 or year%400==0):
+    print("leap year")
 else:
-    print("no discount",a)
+    print("not leap year")
 
 
+# 10. A car rental service charges $20 per day. If the customer rents for more than 7 days, they get a $50 discount. Write a program to calculate the total rental cost.  
 
-age=int(input("enter age:"))
 
-if(age<=12):
-    print("price is 10")
-
-elif(age>12 and age<40):
-    print("price is 15")
-
+days=int(input("enter the days:"))
+if(days>7):
+    total=(days*20)-50
+    print(total)
 else:
-    print("price is 12")
+    total=days*20
+    print(total)
 
 
-temp=int(input("temperature:"))
-hum=int(input("enter humidity:"))
+# 11. A gym offers membership discounts: 10% for students, 15% for teachers, and no discount otherwise. Write a program to calculate the membership fee.
 
-if(temp>30 and hum<40):
-    print("water need")
+age=int(input("enter the age:"))
+occu=input("enter the name:")
+price=500
+if(age<=18 and occu=="student"):
+    total=price-(price*10)/100
+    print(total)
+elif(age>18 and occu=="teacher"):
+    total=price-(price*15)/100
+    print(total)
 else:
-    print("not need")
+    total=price
+    print(total)
 
+
+#trianle check
+
+a=int(input("enter the l1:"))
+b=int(input("enter the l2:"))
+c=int(input("enter the l3:"))
+if(a==b and b==c):
+    print("equilateral triangle")
+elif(a==b or b==c or a==c):
+    print("isosceles triale")
+else:
+    print("scalene triangle")
