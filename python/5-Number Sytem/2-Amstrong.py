@@ -20,7 +20,7 @@ else:
     print("not amstrong")
 
 
-# finding the num nt he number
+# finding the cnt of even and odd
 
 num=int(input("enter the num:"))
 
