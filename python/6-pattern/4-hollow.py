@@ -132,3 +132,31 @@ for i in range(1, n+1):
 for i in range(n-1, 0, -1):
     print("*"*i + " " * (2*(n-i)) + "*" * i)
 
+
+for i in range(1,5):
+    for j in range(1,8):
+        if j<=i or j>=8-i:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+for i in range(3,0,-1):
+    for j in range(1,8):
+        if j<=i or j>=8-i:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+
+row=4
+
+for i in range(row):
+
+    val=65+i
+    diff=row -1
+    for  j in range(i+1):
+        print (chr(val),end=" ")
+        val=val+diff
+        diff=diff-1
+    print()
