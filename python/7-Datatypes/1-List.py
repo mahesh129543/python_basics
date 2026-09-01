@@ -169,3 +169,300 @@ print(list1)
 lt=[1,2,3,4,5,6]
 lt[1]=["mahi","rai"]
 print(lt)
+
+
+# inbuid method in the list
+#1. append()
+
+list1=[12,23,34,45,56,"mahesh","narke",12.45,True]
+list1.append("dhoni")
+print(list1)
+'''
+we can not add more element at one time
+but we can add more list at one time
+'''
+list1.append([1,2,3,4])
+print(list1)
+
+#2. extend()
+'''
+we can add more element at one time
+'''
+
+list1=[11,22,33,44,55]
+list1.extend([1,2,3,4])
+print(list1)
+
+#3. insert()
+'''
+it is use to add the element to the exact position and all eleent is shifted
+next to the element
+sytax: list.insert(index,value)
+it have to parameter the use of the index and value
+'''
+list1=[11,22,33,44,55]
+list1.insert(2,"jay")
+print(list1)
+
+# Deletion methods
+# 1. remove()
+'''
+it is use to remove the element from the list but
+the first occurance of the element is removed
+
+sytax: list.remove(value)
+use: to remove the element from the list
+'''
+list1=[11,22,33,44,55]
+list1.remove(22)
+print(list1)
+
+
+# 2. pop()
+'''
+pop() is use to delete the element on the list
+using the index we need to give the perticular index to the 
+parameter
+it working on the specific index wise
+
+list1.pop()=> it will remove or delete the last element 
+
+sytax: list.pop(index)
+
+'''
+list1=[11,22,33,44,55]
+list1.pop(2)
+list1.pop()
+print(list1)
+
+# remove 3 in the list
+
+l1=[1,1,3,4,5,6,7,3,3,5]
+l2=[]
+
+for i in l1:
+    if i!=3:
+        l2.append(i)
+    
+    
+print(l1)
+print(l2)
+
+
+
+# 3. clear()
+'''
+it is use to clear the list it will remove all the element from the list
+
+syntax: list.clear()
+it will give the empty list => []
+'''
+list1=[11,22,33,44,55]
+list1.clear()
+print(list1)
+
+
+
+#del 
+'''
+it is use to delete the list it will give the error
+it will delete permenantly the list
+'''
+list6=[11,22,33,44,55]
+del list6[2]
+print(list6)
+
+# use also indexing and slicing
+list6=[11,22,33,44,55]
+del list6[2: ]
+print(list6)
+
+list6=[11,22,33,44,55,66,77,88]
+del list6[: :2 ]
+print(list6)
+
+
+# Write a program to count the elements in a list.
+
+l1=[1,2,3,4,5,6,7,8,9]
+cnt=0
+for i in l1:
+    cnt=cnt+1
+print(cnt)
+
+# Write a program to sum of elements in a list.
+
+l1=[1,2,3,4,5,6,7,8,9]
+sum=0
+for i in l1:
+    sum=sum+i
+print(sum)
+
+# WAP to remove all the negative elements from lits.
+
+l1=[-1,2,-3,4,-5,6,-7,8]
+l2=[]
+for i in l1:
+    if i>0:
+        l2.append(i)
+print(l2)
+
+# WAP to remove the duplicates element from the list
+l1=[2,3,4,3,4,5,3,2]
+l2=[]
+for i in l1:
+    if i not in l2:
+        l2.append(i)
+print(l2)
+
+#  list1=[2,3,3,4,6]
+
+#  output: [2,3,4,6]
+
+# we need remove all the 7 from list:[1,2,3,4,5,7]
+l1=[1,2,4,6,7,5,7,7]
+
+l2=[]
+for i in l1:
+    if i!=7:
+        l2.append(i)
+print(l2)
+
+
+
+
+# write a program to print the square of all list items:[1,2,3,4]
+l1=[1,2,3,4]
+l2=[]
+for i in l1:
+    l2.append(i*i)
+print(l2)
+
+# Add single element at the end of the list.
+l1=[12,3,4,5,6]
+l1.append(7)
+print(l1)
+
+# Add multiple elements at the end of the list.
+
+l1=[12,3,4,5,6]
+l1.extend([7,8,9])
+print(l1)
+
+
+
+# count() method
+'''
+
+it is use to count the element in the list
+
+sytax: list.count(value)
+
+value is the element which we need to count it is mendetory
+other wise it will give the error
+if in list there is the multiple same values that time we need
+to count tht time we use the count method it give exact count of the element
+
+
+'''
+
+l1=[12,3,4,5,6]
+print(l1.count(3))
+
+l2=[12,3,4,5,3,4,3,4,5,6]
+print(l2.count(3))
+
+#index() method
+'''
+
+it is use to find the index of the element in the list
+
+sytax: list.index(value)
+
+value is the element which we need to find the index it is mendetory
+other wise it will give the error
+
+also it give the first occurance index of the element
+'''
+
+l1=[12,3,4,5,6]
+print(l1.index(3))
+
+l2=[12,3,4,5,3,4,3,4,5,6]
+print(l2.index(3))
+
+
+
+# reverse() method
+'''
+
+it is use to reverse the list
+
+sytax: list.reverse()
+
+'''
+
+l1=[12,3,4,5,6]
+l1.reverse()
+print(l1)
+
+# reverse the list without using  the reverse method
+
+l1=[12,3,4,5,6]
+l2=l1[::-1]
+print(l2)
+
+l1=[1,2,3,4,4,5,6,7]
+l2=[]
+for i in range(len(l1)-1,-1,-1):
+    l2.append(l1[i])
+print(l2)
+
+l1=[1,2,3,4,5]
+
+print(len(l1))
+
+i=0 
+j=len(l1)-1
+while i<j:
+    temp=l1[i]
+    l1[i]=l1[j]
+    l1[j]=temp
+    i=i+1
+    j=j-1
+print(l1)
+
+
+# sort() method
+
+'''
+
+it is use to sort the list
+
+sytax: list.sort()
+
+'''
+
+l1=[12,3,4,5,6]
+l1.sort()
+print(l1)# it will give the acsending order
+
+l1=[12,3,4,5,6]
+l1.sort()
+l1.reverse()
+print(l1)# it will give the decending order
+
+# sort list without using the inbuid method
+
+l1=[4,5,3,2,7,8,9]
+
+for i in range(len(l1)-1):
+    for j in range(i+1,len(l1)):
+        if l1[i]>l1[j]:
+            temp=l1[i]
+            l1[i]=l1[j]
+            l1[j]=temp
+print(l1)
+
+
+
