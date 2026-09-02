@@ -709,5 +709,21 @@ for i in list2:
 print(zero+one)
 
 
-#    output: [0,0,0,1,1,1,1]
+
+
+
+l1=[2,4,7,86,4,5,56,78,3]
+l2=[]
+
+for i in l1:
+    cnt=0
+    for j in range(1,i+1):
+        if i%j==0:
+            cnt+=1
+    if cnt==2:
+        l2.append(i)
+print(l2)
+
+
+
 
