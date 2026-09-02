@@ -464,5 +464,250 @@ for i in range(len(l1)-1):
             l1[j]=temp
 print(l1)
 
+# you have to print the palindrome element from the list
+l1=[121,456,131,678,454,234]
+res=[]
+for i in l1:
+    temp=i
+    rev=0
+    while temp>0:
+        rem=temp%10
+        rev=rev*10+rem
+        temp=temp//10
+    if rev==i:
+        res.append(i)
+print(res)
 
+
+# concat of teh multiple lists:
+'''
+using the plus operator we will be performing the concatination of 
+the lists
+'''
+
+l1=[1,2,3,4]
+l2=[5,6,7,8]
+l3=l1+l2
+print(l3)
+
+# product of the list
+'''one list print that time of the multiply'''
+l1=[1,2,3,4]
+
+l3=l1*2
+print(l3)
+
+
+l1=[23,4,5,34,5,6,23]
+print(min(l1))
+
+l1=[23,4,5,34,5,6,23]
+print(max(l1))
+
+
+
+
+# max without using the inbuid method
+
+l1=[23,4,5,34,5,6,23]
+max=l1[0]
+for i in l1:
+    if i>max:
+        max=i
+print(max)
+
+#min
+
+l1=[23,4,5,34,5,6,23]
+min=l1[0]
+for i in l1:
+    if i<min:
+        min=i
+print(min)
+
+#second max
+l1=[12,34,23,45,62,21]
+
+max=l1[0]
+for i in l1:
+    if i>max:
+        max=i
+print(max)
+
+secmax=l1[0]
+for i in l1:
+    if i>secmax and i<max:
+        secmax=i
+print(secmax)
+
+
+l1=[12,32,434,54,65,76,54,34]
+
+maxele=0
+secmax=0
+
+for i in l1:
+    if i>maxele:
+        secmax=maxele
+        maxele=i
+    elif i>secmax and i!=maxele:
+        secmax=i
+
+print(secmax)
+
+
+l1=[12,32,434,54,65,76,54,34]
+
+minele=l1[0]
+secmin=float('inf')
+
+for i in l1:
+    if i<minele:
+        secmin=minele
+        minele=i
+    elif i<secmin and i!=minele:
+        secmin=i
+
+print(secmin)
+
+
+
+#deep copy and the shallow copy
+
+
+
+l1=[1,2,3,4,5]#deep copy it bellong to same same memory location
+
+l2=l1
+print(l2)
+l2.append(6)
+print(l2)
+print(l1)
+print(id(l1))
+print(id(l2))
+
+
+l1=[1,2,3,4,5]#shallow copy it create the new memory address list
+l2=l1.copy()
+print(l2)
+l2.append(6)
+print(l2)
+print(id(l1))
+print(id(l2))
+
+
+
+# WAP to find the avg of all the items from the list
+
+l1=[2,4,6,8,7,9,5]
+
+sum=0
+for i in l1:
+    sum+=i
+avg=sum/len(l1)
+print(avg)
+
+# WAP to print the sum of all the even items in a list.
+l1=[2,4,6,8,7,9,5]
+
+sum=0
+for i in l1:
+    if i%2==0:
+        sum+=i
+print(sum)
+
+# WAP to print the sum of all the odd items in a list.
+
+l1=[2,4,6,8,7,9,5]
+
+sum=0
+for i in l1:
+    if i%2!=0:
+        sum+=i
+print(sum)
+
+# wap 2nd max element in a list.
+l1=[2,4,6,8,7,9,5]
+
+maxele=0
+secmax=0
+
+for i in l1:
+    if i>maxele:
+        secmax=maxele
+        maxele=i
+    elif i>secmax and i!=maxele:
+        secmax=i
+
+print("second max",secmax)
+
+# wap 3rd min element in a list.
+l1 = [2, 4, 6, 8, 7, 9, 5]
+
+minele = l1[0]
+secmin = float('inf')
+thirdmin = float('inf')
+
+for i in l1:
+
+    if i < minele:
+        thirdmin = secmin
+        secmin = minele
+        minele = i
+
+    elif i < secmin and i != minele:
+        thirdmin = secmin
+        secmin = i
+
+    elif i < thirdmin and i != secmin and i != minele:
+        thirdmin = i
+
+print("third min", thirdmin)
+
+# 21. seprate the even and odd items from the list in different list 
+
+list1=[10,10,20,30,5,3,9] 
+
+even=[]
+odd=[]
+for i in list1:
+    if i%2==0:
+        even.append(i)
+    else:
+        odd.append(i)
+print(even)
+print(odd)
+
+# 22. all the even itmes shoud be in left side and odd items should be in right side. 
+
+list2=[1,2,3,4,5,6,7]
+
+even=[]
+odd=[]
+
+for i in list2:
+    if i%2==0:
+        even.append(i)
+    else:
+        odd.append(i)
+
+print(even+odd)
+
+# 23. all the zeros (0) should be in left side of the list and 1 should be in roght side. 
+
+list2=[1,0,1,0,0,1,1]
+
+zero=[]
+one=[]
+
+for i in list2:
+    if i==0:
+        zero.append(i)
+    else:
+        one.append(i)
+
+print(zero+one)
+
+
+#    output: [0,0,0,1,1,1,1]
 
