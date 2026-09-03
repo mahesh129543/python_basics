@@ -724,6 +724,208 @@ for i in l1:
         l2.append(i)
 print(l2)
 
+# 1. WAP to print the sum of all the list items.
+l1=[2,4,6,8,9,6]
 
+sum=0
+for i in l1:
+    sum=sum+i
+print("sum of all the items :",sum)
+
+# 2. WAP to print the sum of all the even items from the list 
+
+l1=[2,4,6,8,9,6]
+
+sum=0
+for i in l1:
+    if i%2==0:
+        sum=sum+i
+print("sum of all the even items :",sum)
+
+# 3. WAP to print the sum of all the odd items from the list 
+
+l1=[2,4,6,8,9,6]
+
+sum=0
+for i in l1:
+    if i%2!=0:
+        sum=sum+i
+print("sum of all the odd items :",sum)
+
+# 4. WAP to print the sum of all the even positions items from the list 
+
+l1=[2,4,6,8,9,6]
+
+sum=0
+for i in range(len(l1)):
+    if i%2==0:
+        sum=sum+l1[i]
+print("sum of all the even positions items :",sum)
+
+# 5. WAP to print the sum of all the odd positions items from the list 
+
+l1=[2,4,6,8,9,6]
+
+sum=0
+for i in range(len(l1)):
+    if i%2!=0:
+        sum=sum+l1[i]
+print("sum of all the odd positions items :",sum)
+
+# 6. WAP to print the Avg  of all the items from the list 
+
+l1=[2,4,6,8,9,6]
+
+sum=0
+for i in l1:
+    sum=sum+i
+print("Avg of all the items :",sum/len(l1))
+
+# 7. WAP to print the Avg  of all the even items from the list 
+
+l1=[2,4,6,8,9,6]
+
+sum=0
+for i in l1:
+    if i%2==0:
+        sum=sum+i
+print("Avg of all the even items :",sum/len(l1))
+
+# 8. WAP to print the Avg  of all the odd items from the list 
+
+l1=[2,4,6,8,9,6]
+
+sum=0
+for i in l1:
+    if i%2!=0:
+        sum=sum+i
+print("Avg of all the odd items :",sum/len(l1))
+
+# 9. WAP to print the count all the items from the list 
+
+l1=[2,4,6,8,9,6]
+
+cnt=0
+for i in l1:
+    cnt+=1
+print("count of all the items :",cnt)
+
+# 10. WAP to print the count  all even  items from the list 
+
+l1=[2,4,6,8,9,6]
+
+cnt=0
+for i in l1:
+    if i%2==0:
+        cnt+=1
+print("count of all the even items :",cnt)
+
+# 11. WAP to print the count  all odd  items from the list.
+
+l1=[2,4,6,8,9,6]
+
+cnt=0
+for i in l1:
+    if i%2!=0:
+        cnt+=1
+print("count of all the odd items :",cnt)
+
+# 12. WAP print all the palindrom items from the list 
+l1=[232,343,456,656,765,676]
+l2=[]
+
+for i in l1:
+    rev=0
+    temp=i
+    while i>0:
+        rem=i%10
+        rev=rev*10+rem
+        i=i//10
+    if temp==rev:
+        l2.append(temp)
+
+print(l2)
+
+# 13. WAP print all the prime items from the list 
+l1=[1,2,3,4,5,6,7,8,9,12,13,14]
+l2=[]
+
+for i in l1:
+    cnt=0
+    for j in range(2,i//2):
+        if i%j==0:
+            cnt=cnt+1
+    if cnt==0:
+        l2.append(i)
+
+print(l2)
+
+# 14. WAP print all the armstrong items from the list 
+
+l1=[152,153,154,155,156,157,158,159]
+l2=[]
+
+for i in l1:
+    sum=0
+    temp=i
+    while i>0:
+        rem=i%10
+        sum=sum+rem*rem*rem
+        i=i//10
+    if temp==sum:
+        l2.append(temp)
+
+print(l2)
+
+# 15. WAP print all the sum of prime items from the list
+
+l1=[1,2,3,4,5,6,7,8,9,12,13,14]
+l2=[]
+sum=0
+for i in l1:
+    cnt=0
+    for j in range(2,i//2):
+        if i%j==0:
+            cnt=cnt+1
+    if cnt==0:
+        l2.append(i)
+        sum=sum+i
+
+print(l2)
+
+print(sum)
+
+
+l1=[1,"2#",3,"4#"]
+#res[1,4,3,8]
+
+
+
+res = []
+
+for i in l1:
+    if type(i) == str:
+        i = int(i.replace("#", "")) * 2
+    res.append(i)
+
+print(res)
+
+
+l1=[1,2,3,4,5,6]
+#output=[1,2,3,3,2,1]
+
+res=[]
+
+for i in range(len(l1)//2):
+    res.append(l1[i])
+
+i=len(l1)//2-1
+
+while i>=0:
+    res.append(l1[i])
+    i=i-1
+    
+
+print(res)
 
 
