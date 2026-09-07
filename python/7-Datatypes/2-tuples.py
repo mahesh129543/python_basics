@@ -167,4 +167,136 @@ for i in t:
             print(j)
     else:        
         print(i)
+
+# 1. Python program to find tuples which have all elements divisible by K from a list of tuples
+
+# Input : test_list = [(6, 24, 12), (60, 12, 6), (12, 18, 21)], K = 6 
+
+# Output : [(6, 24, 12), (60, 12, 6)] 
+
+t = [(6, 24, 12), (60, 12, 6), (12, 18, 21)]
+K = 6 
+print(len(t))
+r=[]
+
+for i in t:
+    cnt=0
+    
+    for j in i:
+        
+        if j%6==0:
+            cnt=cnt+1
+    if cnt==len(i):
+        print(i)
+        r.append(i)
+print(r)
+
+
+# Explaination : Both tuples have all elements multiple of 6.
   
+
+# 2. Python program to find Tuples with positive elements in List of tuples
+
+# Input : test_list = [(4, 5, 9), (-3, 2, 3), (-3, 5, 6), (4, -6)] 
+
+# Output : [(4, 5, 9)] 
+t = [(4, 5, 9), (-3, 2, 3), (-3, 5, 6), (4, -6)]
+
+r=[]
+
+for i in t:
+    cnt=0
+    
+    for j in i:
+        
+        if j>0:
+            cnt=cnt+1
+    if cnt==len(i):
+        print(i)
+        r.append(i)
+print(r)    
+
+
+
+# Explaination : Extracted tuples with all positive elements.
+
+#  3. Python | Removing duplicates from tuple
+
+# The original tuple is : (1, 3, 5, 2, 3, 5, 1, 1, 3)
+t=(1, 3, 5, 2, 3, 5, 1, 1, 3)
+r=[]
+
+for i in t:
+    if i not in r:
+        r.append(i)
+    
+print(tuple(r))
+
+
+''' remember the converting the tuple using the tuple the tuple()
+        inside the tuple we can store the list
+         syntax: tuple(list) => type casting '''
+
+
+# The tuple after removing duplicates : (1, 3, 5, 2)
+
+# 4. Python | Remove duplicate lists in tuples (Preserving Order)
+
+ 
+
+# The original tuple is : ([4, 7, 8], [1, 2, 3], [4, 7, 8], [9, 10, 11], [1, 2, 3])
+t=([4, 7, 8], [1, 2, 3], [4, 7, 8], [9, 10, 11], [1, 2, 3])
+r=[]
+
+for i in t:
+    if i not in r:
+        r.append(i)
+    
+print(r)
+# The unique lists tuple is : [[4, 7, 8], [1, 2, 3], [9, 10, 11]]
+
+
+# 5. Python – Sum of tuple elements
+
+# The original tuple is : (7, 8, 9, 1, 10, 7)
+t=(7, 8, 9, 1, 10, 7)
+sum=0
+for i in t:
+    sum=sum+i
+print(sum)
+
+# The summation of tuple elements are: 42
+
+# Write a  Python program to remove an empty tuple(s) from a list of tuples.
+
+# Sample data: [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
+t=[(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
+print(len(t[0]),len(t[3]))
+r=[]
+for i in t:
+    if len(i)>0:
+        r.append(i)
+        
+    
+print(r)
+# Expected output: [('',), ('a', 'b'), ('a', 'b', 'c'), 'd']
+
+# prime number in the tuple
+
+t=(1,2,3,4,5,6,7,8,9,10)
+r=[]
+sum=0
+
+for i in t:
+    cnt=0
+    for j in range(2,i//2):
+        if i%j==0:
+            cnt=cnt+1
+    if cnt==0:
+        r.append(i) 
+        sum=sum+i
+        
+
+print("prime number:",r)
+print("sum of the prime number:",sum)
+print("count of the prime number:",len(r))
