@@ -87,6 +87,18 @@ for i in d1:
         d3[i]=d1[i]
 print(d3)
 
+d1={"rohit":45, "virat":89, "laxman":34} 
+d2={"dhoni":7,"rohit": 10, "rahul":56}
+d=d1.copy()
+
+for k,v in d2.items():
+    if k in d:
+        d[k]=d[k]+v
+    else:
+        d[k]=v
+print(d)
+
+
 
 
  
@@ -95,7 +107,7 @@ print(d3)
 
 #    and return a dictionary with word frequencies.
 
-s="mahesh is goodboy is good boy"
+s="mahesh is good boy is good boy"
 d={}
 for i in s.split():
     if i in d:
@@ -208,3 +220,20 @@ for i in d1:
     if i in d2:
         d3[i]=d1[i]
 print(d3)
+
+# check palindrom
+
+l=[1,2,1]
+i=0
+j=len(l)-1
+while i<j:
+    if l[i]==l[j]:
+        print("palindrom")
+    else:
+        print("not palindrom")
+    i=i+1
+    j=j-1
+
+
+
+
