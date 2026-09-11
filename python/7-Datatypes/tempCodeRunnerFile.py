@@ -1,3 +1,2 @@
-t=(10,20,30,40,50)
-t[0]=100
-print(t)
+
+print(set1.symmetric_difference(set2))
