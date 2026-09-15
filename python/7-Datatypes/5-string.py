@@ -192,7 +192,7 @@ for i in l:
 
 syntax: string.find(value)
 
-give index number'''
+give index number but if not present it will give -1'''
 
 s="i love india"
 print(s.find("y"))
@@ -203,9 +203,29 @@ print(s.find("y"))
 
 syntax: string.index(value)
 
-give index number'''
+give index number but if not present it will give error'''
 
 s="i love india"
 print(s.index("i"))
 
+#rfind()
+'''find the last index of the element in the string
+
+syntax: string.rfind(value)
+
+give index number but if not present it will give -1'''
+
+s="i love india"
+print(s.rfind("i"))
+
+
+#rindex()
+'''find the last index of the element in the string
+
+syntax: string.rindex(value)
+
+give index number but if not present it will give error'''
+
+s="i love india"
+print(s.rindex("i"))
 
