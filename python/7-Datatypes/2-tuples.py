@@ -218,6 +218,8 @@ print(r)
 
 
 
+
+
 # Explaination : Extracted tuples with all positive elements.
 
 #  3. Python | Removing duplicates from tuple

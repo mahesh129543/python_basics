@@ -6,7 +6,7 @@
 # features:
 # 1. unordered
 # 2. unindexed
-# 3. unchangeable
+
 # 4. mutable    
 # set are created usigg the curly brackets {}
 # syntax : set1={value1,value2,value3}
@@ -106,6 +106,7 @@ del is use to delete the set
 set1={12,34,56,78,90}
 del set1
 # print(set1)
+print("difff")
 
 
 # difference()
@@ -186,7 +187,7 @@ print(set1.isdisjoint(set2))
 
 s={1,2}
 s1={5,6,7,}
-print(s.isdisjoint(s1))
+print("hi",s.isdisjoint(s1))
 
 #issubset()
 '''

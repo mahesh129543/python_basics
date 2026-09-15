@@ -170,7 +170,7 @@ lt=[1,2,3,4,5,6]
 lt[1]=["mahi","rai"]
 print(lt)
 
-
+print("methos modification in the list")
 # inbuid method in the list
 #1. append()
 
