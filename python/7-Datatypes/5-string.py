@@ -511,4 +511,205 @@ l1=[]
 for i in l:
     l1.append(int(i))
 print(l1)
-    
+
+
+
+#partition()
+'''partition the string and return tuple 
+it will separet the string in the specific values.
+syntax: string.partition(substring)
+partition will count in threeparts'''
+s="i love india"
+print(s.partition("love"))
+
+#rpartition()
+'''partition the string and return tuple 
+it will separet the string in the specific values from the right.
+syntax: string.rpartition(substring)
+partition will count in threeparts'''
+s="i love india"
+print(s.rpartition("india"))
+
+#zfill()
+'''fill the string with zero in the left side
+syntax: string.zfill(width)
+
+width is the length of the string plus zeors
+length of string is equal to the width'''
+s="mahesh"
+print(s.zfill(10))
+
+
+# sorted()
+'''sort the string 
+sort the aplhabets in acsending order and give the list 
+syntax: sorted(string)
+return the list'''
+s="i love india"
+print(sorted(s))
+
+# anagram string
+
+# to check the giving strings are anagram or not
+
+# s1=input("enter string:")
+# s2=input("enter string:")
+# d={}
+# for i in s1:
+#     d[i]=d.get(i,0)+1
+# for i in s2:
+#     d[i]=d.get(i,0)-1
+# for i in d:
+#     if d[i]!=0:
+#         print("not anagram")
+#         break
+# else:
+#     print("anagram")
+
+
+# s1=input("enter string:")
+# s2=input("enter string:")
+# l=[]
+# for i in s1:
+#     l.append(i)
+# for i in s2:
+#     if i in l:
+#         l.remove(i)
+#     else:
+#         print("not anagram")
+#         break
+# else:
+#     print("anagram")
+
+
+
+
+
+# 1.WAP to print the username only from the list of email
+
+# # input= ["virat@gmail.com","dhoni@gmail.com","rohit@gmail.com"]
+input= ["virat@gmail.com","dhoni@gmail.com","rohit@gmail.com"]
+
+l=[]
+for i in input:
+    l.append(i.split("@")[0])
+print(l)
+
+# # output: [virat,dhoni,rohit]
+
+ 
+
+# 2.Count Words in a Sentence:
+
+# # Given a sentence, count the number of words in it using the split method.
+
+sentence = "I like to code in Python"
+
+l=sentence.split(" ")
+print(len(l))
+
+ 
+
+# 3.Extract Domain Names from Emails:
+
+# # Given a list of email addresses, extract the domain names using the split method
+
+input= ["user1@example.com", "user2@domain.com", "user3@company.org"]
+
+l=[]
+for i in input:
+    l.append(i.split("@")[1])
+print(l)
+
+ 
+
+# 4.Convert a Sentence into a List of Words.
+
+
+
+sentence = "I like to code in Python"
+
+l=sentence.split(" ")
+print(l)
+
+ 
+
+# 5. Find the Longest Word in a Sentence:
+
+# # Given a sentence, find the longest word using the split method.
+
+sentence = "Identify the longest word in this sentence."
+
+l=sentence.split(" ")
+res=""
+for i in l:
+    if len(i)>len(res):
+        res=i
+       
+print(res)
+
+# # output: 'sentence.'
+
+ 
+
+# 6.Check for Palindrome Words in a Sentence:
+
+# #Given a sentence, check which words are palindromes using the split method.
+
+sentence = "Madam Arora teaches malayalam"
+
+l=[]
+s=sentence.split(" ")
+for i in s:
+    rev=""
+    for j in i.lower():
+        rev=j+rev
+    if rev==i.lower():
+        l.append(i)
+print(l)
+
+# #output: ['madam', 'Arora', 'malayalam']
+
+
+s="hello this is my world"
+
+#you need to print most frequent element.
+
+d={}
+max=0
+key=""
+for i in s:
+    d[i]=d.get(i,0)+1
+
+
+for i in d:
+    if i!=" " and d[i]>max:
+        max=d[i]
+        key=i
+print(max,key)
+
+l=["mango", "lichi", "grapes", "banana", "apple"]
+
+# most frquent element
+
+d1={}
+for i in l:
+    for j in i:
+        d1[j]=d1.get(j,0)+1
+
+max=0
+key=""
+for i in d1:
+    if d1[i]>max:
+        max=d1[i]
+        key=i
+print(max,key)
+
+# max=0
+# key=""
+# for i in d:
+#     if d[i]>max:
+#         max=d[i]
+#         key=i
+# print(max,key)
+

@@ -1,8 +1,7 @@
-n = int(input("Enter the number: "))
-
-# sq = n * n
-
-# if str(sq).endswith(str(n)):
-#     print("Automorhic number")
-# else:
-#     print("Not an autorphic number")
+max=0
+# key=""
+# for i in d:
+#     if d[i]>max:
+#         max=d[i]
+#         key=i
+# print(max,key)
