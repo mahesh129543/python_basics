@@ -705,11 +705,106 @@ for i in d1:
         key=i
 print(max,key)
 
-# max=0
-# key=""
-# for i in d:
-#     if d[i]>max:
-#         max=d[i]
-#         key=i
-# print(max,key)
+# String Expansion:
+s="a2b3c5"
+i=0
+op=""
+while i<len(s):
+    if s[i].isalpha():
+        op=op+s[i]
+    else:
+        op=op+s[i-1]*(int(s[i])-1)
+    i=i+1
+print(op)
+# op="aabbbccccc"
 
+
+s="aabbbccCCC"
+d={}
+for i in s:
+    i=i.lower()
+    d[i]=d.get(i,0)+1
+print(d)
+for k,v in d.items():
+    print(k+str(v),end="")
+
+
+
+   
+
+
+#res="a2b3c5"
+
+
+# longest substring without repeating characters
+s="hello"
+
+l=[]
+max=0
+srt=""
+for i in range(len(s)):
+    for j in range(i+1,len(s)+1):
+        sub=s[i:j]
+        if len(sub)==len(set(sub)):
+            l.append(sub)
+            if len(sub)>max:
+                    max=len(sub)
+                    srt=sub
+print(l)
+print(srt)
+
+s="hello"
+cur=""
+log=""
+for i in s:
+    if i in cur:
+        cur=cur[cur.index(i)+1:] #1
+    cur=cur+i 
+    if len(cur) > len (log):
+        log=cur
+print(log)
+
+
+s="ad#b"
+
+s1=[]
+for i in s:
+    if i =='#':
+        s1.pop()
+    else:
+        s1.append(i)
+print("".join(s1))
+
+s="ah#b"
+res=""
+for i in s:
+    if i=="#":
+        res=res[:-1]
+    else:
+        res=res+i
+#ah
+print(res)
+s="ab"
+
+
+s="i live in pune2 and my code is 42201"
+#Print the sum of all the numbers so op = 11
+
+sum=0
+for i in s:
+    if i.isdigit():
+        sum=sum+int(i)
+print(sum)
+
+# Write a function to find the first non-repeating character in a string.
+
+def nonrep(s):
+    d={}
+    for i in s:
+        d[i]=d.get(i,0)+1
+    for k,v in d.items():
+        if v==1:
+            return k
+        
+  
+print(nonrep("hsdgsfhgyteefbsdb"))
